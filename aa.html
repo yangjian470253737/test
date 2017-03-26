@@ -7,7 +7,15 @@
 <body>
 
 
-<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3001662672&site=qq&menu=yes">click here</a>
-<a target="_blank" href="tencent://message/?uin=3001662672&Site=sc.chinaz.com&Menu=yes">在线客服1号</a>
+<a class="button" target="_blank" style="cursor:pointer">click here</a>
+
 </body>
+<script>
+	var button=document.getElementsByClassName('button')[0];
+	button.onclick=function(){
+		window.open('http://wpa.qq.com/msgrd?v=3&uin=3001662672&site=qq&menu=yes');
+	}
+
+
+</script>
 </html>

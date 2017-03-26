@@ -1,0 +1,65 @@
+<!DOCTYPE html">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0">
+    <title>Mobile Safari 调用本地APP，否则进入App Store下载</title>
+  <meta name="keywords" content="Mobile Safari 调用本地APP，否则进入App Store下载" />
+  <meta name="description" content="Mobile Safari 调用本地APP，否则进入App Store下载" />
+  <script type="text/javascript">
+  /**  
+  浏览器版本信息
+  * @type {Object} 
+  * @return {Boolean}  返回布尔值     
+  */
+  function browser() {
+      var u = navigator.userAgent.toLowerCase();
+      var app = navigator.appVersion.toLowerCase();
+      return {
+          txt: u, // 浏览器版本信息
+          version: (u.match(/.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/) || [])[1], // 版本号       
+          msie: /msie/.test(u) && !/opera/.test(u), // IE内核
+          mozilla: /mozilla/.test(u) && !/(compatible|webkit)/.test(u), // 火狐浏览器
+          safari: /safari/.test(u) && !/chrome/.test(u), //是否为safair
+          chrome: /chrome/.test(u), //是否为chrome
+          opera: /opera/.test(u), //是否为oprea
+          presto: u.indexOf('presto/') > -1, //opera内核
+          webKit: u.indexOf('applewebkit/') > -1, //苹果、谷歌内核
+          gecko: u.indexOf('gecko/') > -1 && u.indexOf('khtml') == -1, //火狐内核
+          mobile: !!u.match(/applewebkit.*mobile.*/), //是否为移动终端
+          ios: !!u.match(/\(i[^;]+;( u;)? cpu.+mac os x/), //ios终端
+          android: u.indexOf('android') > -1, //android终端
+          iPhone: u.indexOf('iphone') > -1, //是否为iPhone
+          iPad: u.indexOf('ipad') > -1, //是否iPad
+          webApp: !!u.match(/applewebkit.*mobile.*/) && u.indexOf('safari/') == -1 //是否web应该程序，没有头部与底部
+      };
+  }
+  var timeout;
+  function open_appstore() {
+    var b=browser();
+    if(b.ios||b.iPhone||b.iPad){
+      window.location="itms-apps://itunes.apple.com/cn/app/qq-2011/id444934666?mt=8";
+    }else if(b.android){
+      console.log(1);
+    }else{
+      console.log(0);
+    }
+  } 
+
+  function try_to_open_app() {
+    var b=browser();
+    if(b.ios||b.iPhone||b.iPad){
+      window.location="mqq:open";
+    }else if(b.android){
+     console.log(2);
+    }else{
+      console.log(0);
+    }
+    timeout = setTimeout('open_appstore()', 30);
+  }
+  try_to_open_app();
+  </script>
+</head>
+<body>
+</body>
+</html>

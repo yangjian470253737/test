@@ -43,20 +43,20 @@
     if(b.ios||b.iPhone||b.iPad){
       window.location="itms-apps://itunes.apple.com/cn/app/qq-2011/id444934666?mt=8";
     }else if(b.android){
-      console.log(1);
+      window.location="http://wpa.qq.com/msgrd?v=3&uin=3001662672&site=qq&menu=yes";
     }else{
-      console.log(0);
+      window.location="http://wpa.qq.com/msgrd?v=3&uin=3001662672&site=qq&menu=yes";
     }
   } 
 
   function try_to_open_app() {
     var b=browser();
     if(b.ios||b.iPhone||b.iPad){
-      window.location="http://qm.qq.com/cgi-bin/qm/qr?k=";
+      window.location="mqq://im/chat?chat_type=wpa&uin=3001662672&version=1&src_type=web";
     }else if(b.android){
-     console.log(2);
+     window.location="http://wpa.qq.com/msgrd?v=3&uin=3001662672&site=qq&menu=yes";
     }else{
-      console.log(0);
+      window.location="http://wpa.qq.com/msgrd?v=3&uin=3001662672&site=qq&menu=yes";
     }
     timeout = setTimeout('open_appstore()', 30);
   }
@@ -65,7 +65,7 @@
 
   $(function(){
         $(".test").on("click",function(){
-            window.location="mqq://im/chat?chat_type=wpa&uin=3001662672&version=1&src_type=web";
+          try_to_open_app()
         })
       })
   </script>

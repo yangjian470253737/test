@@ -6,7 +6,10 @@
     <title>Mobile Safari 调用本地APP，否则进入App Store下载</title>
   <meta name="keywords" content="Mobile Safari 调用本地APP，否则进入App Store下载" />
   <meta name="description" content="Mobile Safari 调用本地APP，否则进入App Store下载" />
+  <script src="jquery.js"></script>
   <script type="text/javascript">
+      
+  
   /**  
   浏览器版本信息
   * @type {Object} 
@@ -38,7 +41,7 @@
   function open_appstore() {
     var b=browser();
     if(b.ios||b.iPhone||b.iPad){
-      window.location="itms-apps://itunes.apple.com/cn/app/qq-2011/id444934666?mt=8&uin=3001662672";
+      // window.location="itms-apps://itunes.apple.com/cn/app/qq-2011/id444934666?mt=8&uin=3001662672";
     }else if(b.android){
       console.log(1);
     }else{
@@ -57,9 +60,26 @@
     }
     timeout = setTimeout('open_appstore()', 30);
   }
-  try_to_open_app();
+  
+
+  $(function(){
+        $(".test").on("click",function(){
+          try_to_open_app();
+        })
+      })
   </script>
 </head>
+<style>
+  .test{
+    font-size: 20px;
+    cursor: pointer;
+  }
+</style>
 <body>
+  <div>
+    <p class="test">
+      点击
+    </p>
+  </div>
 </body>
 </html>

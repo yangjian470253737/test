@@ -41,7 +41,7 @@
   function open_appstore() {
     var b=browser();
     if(b.ios||b.iPhone||b.iPad){
-      // window.location="itms-apps://itunes.apple.com/cn/app/qq-2011/id444934666?mt=8&uin=3001662672";
+      window.location="itms-apps://itunes.apple.com/cn/app/qq-2011/id444934666?mt=8&uin=3001662672";
     }else if(b.android){
       console.log(1);
     }else{
@@ -52,7 +52,7 @@
   function try_to_open_app() {
     var b=browser();
     if(b.ios||b.iPhone||b.iPad){
-      window.location="http://wpa.qq.com/msgrd?v=3&uin=3001662672&site=qq&menu=yes";
+      window.location="http://qm.qq.com/cgi-bin/qm/qr?k=";
     }else if(b.android){
      console.log(2);
     }else{
@@ -64,7 +64,8 @@
 
   $(function(){
         $(".test").on("click",function(){
-          try_to_open_app();
+          // try_to_open_app();
+          window.location="http://qm.qq.com/cgi-bin/qm/qr?k=";
         })
       })
   </script>

@@ -1,0 +1,28 @@
+.yj-file{
+	width: 400px;
+	height: 40px;
+	margin: 50px auto;
+}
+.yj-file-p{
+	width: auto;
+	height: 25px;
+	float: left;
+	font-size: 16px;
+	margin-left: 14px;
+	line-height: 25px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.yj-file-p:hover{
+	background: #218674;
+}
+.yj-file-content{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.yj-file-tail{
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+}

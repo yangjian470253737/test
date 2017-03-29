@@ -861,7 +861,8 @@ a{
 	height: auto;
 	font-size: 16px;
 	overflow: hidden;
-    margin-bottom:20px;
+    margin-bottom:30px;
+    padding-bottom: 30px;
 }
 .kefu a{
 	display: block;
@@ -886,7 +887,9 @@ a{
 	color: #505050;
 	margin-bottom: 20px;
 }
-
+.kefu-qq{
+    cursor:pointer;
+}
 .liebiao{
     margin-right:10px;
     margin-top:20px;
@@ -913,7 +916,7 @@ a{
 .liebio-small{
     width: 100%;
     height: auto;
-    display: block;
+    display: none;
 }
 .liebio-small ul li{
     float: left;
@@ -1005,7 +1008,11 @@ a{
     .liebiao{
         display:block;
     }
-   
+   .liebio-small{
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 	#center .container .row .col-lg-12 .banner .banner-center ul li{
 		width: 100%;

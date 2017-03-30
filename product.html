@@ -358,4 +358,19 @@
 		</div>
 	</div>
 </body>
+<script>
+	 // 技术支持
+
+   $(".all-file").on("click",function(){
+   	 $(".portfolio-item").show();
+   })
+   	<s:iterator var="type1" value="#session.typeList">
+	   $(".a<s:property value='#type1.typeId'/>").on("click",function(){
+	   	 $(".portfolio-item").hide("normal",function(){
+	   	 	$(".only-<s:property value='#type1.typeId'/>").show();
+	   	 });
+	
+	   })
+	</s:iterator>
+</script>
 </html>

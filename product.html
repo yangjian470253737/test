@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 <head>
@@ -18,7 +19,15 @@
 
 	<link rel="shortcut icon" href="image/logo.ico">
 
-
+    <script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?a9471206fb6e7c6ba54502d94e35ef96";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+    </script>
 
 </head>
 <body>
@@ -200,19 +209,68 @@
     	<form action="getPage?pageIndex=1">
 			<div class="yj-input-group">
 				<div class="yj-input-group-inner">
-					<input type="text" name="proSeach" style="width: 12em;height: 1.5em;margin:1em;border-radius: 5px;font-size:16px;font-family:'微软雅黑'" class=""><input class="" style="width: 4em;font-size:16px;font-family:'微软雅黑';border-radius:5px;background:#09828C;" type="submit" value="搜索"/>
+					<input type="text" name="proSeach" style="width: 9em;height: 1.5em;margin:1em;border-radius: 5px;font-size:16px;font-family:'微软雅黑'" class=""><input class="" style="width: 4em;font-size:16px;font-family:'微软雅黑';border-radius:5px;background:#09828C;" type="submit" value="搜索"/>
 				</div>
 			</div>
 	    </form>
 
 	   <div class="yj-file">
-	   	   <p class="yj-file-p">
-	   	   	循环标题
+	   	   <p class="yj-file-p all-file">
+	   	   	   全部
 	   	   </p>
+	   	   
+	   	   <s:iterator var="type1" value="#session.typeList">
+				<s:if test="#type1!=null">
+					<p class="yj-file-p a<s:property value='#type1.typeId'/>">
+					    <s:property value="#type1.typeName"/>
+	   	            </p>
+				</s:if>
+			</s:iterator>
+
+	   	   
+
 	   </div>
-        <div class="yj-file-content">
-        	<div class="yj-file-tail">
-        		所展示的文件或视频
+        <div class="yj-file-content" style="margin-bottom:50px">
+        	<div class="yj-file-tail" style="margin-top:10px;overflow:hidden;">
+        		<s:if test="#session.filePage.list.size>0">
+				<s:iterator var="page" value="#session.filePage.list">
+                 
+
+                    <s:if test="null!=#page & #page.homeType.typeId!=1">
+						<!-- portfolio item -->
+						<div class="portfolio-item grid only-<s:property value='#page.homeType.typeId'/>" style="height:200px;width:200px;margin:10px;float:left;cursor:pointer" title="这是介绍视频">
+							<div class="portfolio" style="height:200px;width:200px">
+								<video src="<s:property value='#page.fileUrl'/>" controls="controls" style="width:100%;height:auto">你的浏览器版本太低，请先升级浏览器或使用其他浏览器观看</video>
+								
+								<div class="portfolio-overlay" style="height:100%;width:100%;">
+									<div class="thumb-info">
+										<h5><s:property value="#page.fileDescribe"/></h5>
+										<i class="icon-time icon-2x"><s:property value="#page.fileUpdate"/></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</s:if>
+                    
+                   <s:if test="null!=#page & #page.homeType.typeId==1">
+						<!-- portfolio item -->
+						<div class="portfolio-item grid only-<s:property value='#page.homeType.typeId'/>" style="height:200px;width:200px;margin:10px;float:left" title="这是介绍文件">
+							<div class="portfolio" style="height:200px;width:200px">
+								<a href="download?uri=<s:property value='#page.fileId'/>" ref="prettyPhoto" class="portfolio-image" target="_blank">
+								<img style="width:200px;height:200px" src="<s:property value='#page.fileImages'/>" alt="" />
+								<div class="portfolio-overlay">
+									<div class="thumb-info">
+										<h5><s:property value="#page.fileDescribe"/></h5>
+										<i class="icon-file icon-2x"><s:property value="#page.fileUpdate"/></i>
+									</div>
+								</div>
+								</a>
+							</div>
+						</div>
+						<!-- end portfolio item -->
+					</s:if>
+				</s:iterator>
+			    </s:if>
         	</div>
         </div>
     <!-- more vedio -->

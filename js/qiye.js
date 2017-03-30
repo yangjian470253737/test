@@ -88,7 +88,8 @@ $(function(){
 	    }else{
 	      window.location="http://wpa.qq.com/msgrd?v=3&uin=3001662672&site=qq&menu=yes";
 	    }
-	    timeout = setTimeout('open_appstore()', 300);
+	    // 进入商店关闭
+	    // timeout = setTimeout('open_appstore()', 300);
    })
 
    $(".cb").on("click",function(){
@@ -100,8 +101,7 @@ $(function(){
 	    }else{
 	      window.location="http://wpa.qq.com/msgrd?v=3&uin=3001678739&site=qq&menu=yes";
 	    }
-	    // 进入商店关闭
-	    // timeout = setTimeout('open_appstore()', 300);
+	    timeout = setTimeout('open_appstore()', 300);
    })
    
    $(".htn").on("click",function(){
@@ -176,5 +176,20 @@ $(function(){
 	    timeout = setTimeout('open_appstore()', 300);
    })
 
+
+   // 技术支持
+
+   $(".all-file").on("click",function(){
+   	 $(".portfolio-item").show();
+   })
+   	<s:iterator var="type1" value="#session.typeList">
+	   $(".a<s:property value='#type1.typeId'/>").on("click",function(){
+	   	 $(".portfolio-item").hide("normal",function(){
+	   	 	$(".only-<s:property value='#type1.typeId'/>").show();
+	   	 });
+	
+	   })
+	</s:iterator>
+   
 })
 

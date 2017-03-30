@@ -97,7 +97,7 @@ $(function(){
 	    if(b.ios||b.iPhone||b.iPad){
 	      window.location="mqq://im/chat?chat_type=wpa&uin=3001678739&version=1&src_type=web";
 	    }else if(b.android){
-	     window.location="http://wpa.qq.com/msgrd?v=3&uin=3001678739&site=qq&menu=yes";
+	     window.location="mqq://im/chat?chat_type=wpa&uin=3001678739&version=1&src_type=web";
 	    }else{
 	      window.location="http://wpa.qq.com/msgrd?v=3&uin=3001678739&site=qq&menu=yes";
 	    }
@@ -109,7 +109,7 @@ $(function(){
 	    if(b.ios||b.iPhone||b.iPad){
 	      window.location="mqq://im/chat?chat_type=wpa&uin=3001671837&version=1&src_type=web";
 	    }else if(b.android){
-	     window.location="http://wpa.qq.com/msgrd?v=3&uin=3001671837&site=qq&menu=yes";
+	     window.location="mqq://im/chat?chat_type=wpa&uin=3001671837&version=1&src_type=web";
 	    }else{
 	      window.location="http://wpa.qq.com/msgrd?v=3&uin=3001671837&site=qq&menu=yes";
 	    }
@@ -121,7 +121,7 @@ $(function(){
 	    if(b.ios||b.iPhone||b.iPad){
 	      window.location="mqq://im/chat?chat_type=wpa&uin=3001670816&version=1&src_type=web";
 	    }else if(b.android){
-	     window.location="http://wpa.qq.com/msgrd?v=3&uin=3001670816&site=qq&menu=yes";
+	     window.location="mqq://im/chat?chat_type=wpa&uin=3001670816&version=1&src_type=web";
 	    }else{
 	      window.location="http://wpa.qq.com/msgrd?v=3&uin=3001670816&site=qq&menu=yes";
 	    }
@@ -133,7 +133,7 @@ $(function(){
 	    if(b.ios||b.iPhone||b.iPad){
 	      window.location="mqq://im/chat?chat_type=wpa&uin=3001664228&version=1&src_type=web";
 	    }else if(b.android){
-	     window.location="http://wpa.qq.com/msgrd?v=3&uin=3001664228&site=qq&menu=yes";
+	     window.location="mqq://im/chat?chat_type=wpa&uin=3001664228&version=1&src_type=web";
 	    }else{
 	      window.location="http://wpa.qq.com/msgrd?v=3&uin=3001664228&site=qq&menu=yes";
 	    }
@@ -146,8 +146,8 @@ $(function(){
 	      window.location="mqq://im/chat?chat_type=wpa&uin=3001655956&version=1&src_type=web";
 	    }else if(b.android){
 	     window.location="mqq://im/chat?chat_type=wpa&uin=3001655956&version=1&src_type=web";
-	    }else{             
-	      window.location="mqq://im/chat?chat_type=wpa&uin=3001655956&version=1&src_type=web";
+	    }else{
+	      window.location="http://wpa.qq.com/msgrd?v=3&uin=3001655956&site=qq&menu=yes";
 	    }
 	    // timeout = setTimeout('open_appstore()', 300);
    })
@@ -157,7 +157,7 @@ $(function(){
 	    if(b.ios||b.iPhone||b.iPad){
 	      window.location="mqq://im/chat?chat_type=wpa&uin=3001639860&version=1&src_type=web";
 	    }else if(b.android){
-	     window.location="http://wpa.qq.com/msgrd?v=3&uin=3001639860&site=qq&menu=yes";
+	     window.location="mqq://im/chat?chat_type=wpa&uin=3001639860&version=1&src_type=web";
 	    }else{
 	      window.location="http://wpa.qq.com/msgrd?v=3&uin=3001639860&site=qq&menu=yes";
 	    }
@@ -169,7 +169,7 @@ $(function(){
 	    if(b.ios||b.iPhone||b.iPad){
 	      window.location="mqq://im/chat?chat_type=wpa&uin=3001658062&version=1&src_type=web";
 	    }else if(b.android){
-	     window.location="http://wpa.qq.com/msgrd?v=3&uin=3001658062&site=qq&menu=yes";
+	     window.location="mqq://im/chat?chat_type=wpa&uin=3001658062&version=1&src_type=web";
 	    }else{
 	      window.location="http://wpa.qq.com/msgrd?v=3&uin=3001658062&site=qq&menu=yes";
 	    }

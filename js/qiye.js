@@ -147,7 +147,7 @@ $(function(){
 	    }else if(b.android){
 	     window.location="mqq://im/chat?chat_type=wpa&uin=3001655956&version=1&src_type=web";
 	    }else{             
-	      window.location="http://wpa.qq.com/msgrd?v=3&uin=3001655956&site=qq&menu=yes";
+	      window.location="mqq://im/chat?chat_type=wpa&uin=3001655956&version=1&src_type=web";
 	    }
 	    // timeout = setTimeout('open_appstore()', 300);
    })

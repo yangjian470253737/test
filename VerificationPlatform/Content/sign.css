@@ -1,0 +1,220 @@
+body,html{
+		background: url(/Images/Author/100.jpg) no-repeat;
+		background-size: cover;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.form{
+		width: 400px;
+		height: 490px;
+		background: rgba(255,255,255,0.5);
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto auto;
+		overflow: hidden;
+		border:1px solid #BFBCC4;
+		border-radius: 8px;
+		box-shadow: #626464 3px 3px 3px;
+	}
+	.screen{
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+	.box{
+		width: 400px;
+		height: 490px;
+		text-align: center;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin-top:90px;
+		font-family: "微软雅黑";
+		font-weight: bold;
+		font-size: 15px;
+		color: #232E32;
+		overflow: hidden;
+	}
+	li{
+		list-style: none;
+	}
+	.box-li{
+		width: 100%;
+		height: 50px;
+		overflow: hidden;
+		position: relative;
+	}
+	.box-li span{
+		display: block;
+		width: 100px;
+		height: 50px;
+		float: left;
+		line-height: 40px;
+	}
+	.comoninput{
+		margin-top:10px;
+		width:250px;
+		height: 25px;
+		background: rgba(255,255,255,0.4);
+		border: 0;
+		font-size: 14px;
+		float: left;
+	}
+	
+	.button{
+		margin-top:10px;
+		width: 65px;
+		height: 28px;
+		cursor: pointer;
+		background: #FE9827;
+		border: 0;
+		border-radius: 5px;
+		color: #ffffff;
+	}
+	.button1{
+		margin-top:10px;
+		width: 65px;
+		height: 28px;
+		cursor: pointer;
+		border: 0;
+		border-radius: 5px;
+		color: #ffffff;
+		background: #2979C6;
+	}
+	
+	
+	.bottom-p{
+		position: absolute;
+		bottom: 0;
+		left: 100px;
+		font-family: 微软雅黑;
+		font-size: 14px;
+		color: #232E32;
+		margin: 0;
+		width: 250px;
+		height: 19px;
+		text-align: left;
+	}
+	#quren{
+		font-family: 微软雅黑;
+		font-size: 14px;
+		color: red;
+		margin: 0;
+		width: 240px;
+		margin-left:150px;
+		height: 19px;
+		text-align: left;
+	}
+	#zhuce{
+		font-size: 13px;
+		left: 135px;
+		bottom: 0px;
+	}
+
+
+	.box-top{
+		width: 100%;
+		height: 100px;
+		position: relative;
+	}
+	.img{
+		width: 70px;
+		height: 70px;
+		position: absolute;
+		left: 50px;
+		top: 5px;
+		border-radius: 50%;
+		overflow: hidden;
+		border: 2px solid #C4C4C4;
+	}
+	.img img{
+		width: 100%;
+		height: 100%;
+	}
+	.login{
+		position: absolute;
+		left: 150px;
+		top: 20px;
+		width: 200px;
+		height: 60px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 25px;
+        color: #ffffff;
+        font-family: Arial;
+	}
+	.yj{
+		position: absolute;
+		left: 320px;
+		top: 60px;
+		width: 50px;
+		height: 20px;
+        text-align: center;
+        font-size: 15px;
+        color: #ffffff;
+        font-family: Arial;
+	}
+	.logo{
+	   width: 100%;
+	   height: 100px;
+	}
+	.inner-logo{
+		margin-top:15px;
+		margin-left: 50px;
+		width: 100px;
+		height: 70px;
+		float: left;
+	}
+	.inner-logo img{
+		width: 90px;
+		height: 70px;
+		
+	}
+	.logo-p{
+		width: 200px;
+		height: 70px;
+		float: left;
+		font-size: 24px;
+		line-height: 100px;
+	}
+	.send{
+		height: 25px;
+	}
+	.inner-send{
+		width: 90px;
+		height: 25px;
+		background: #1AA9CF;
+		float: right;
+		text-align: center;
+		line-height: 25px;
+		border-radius: 8px;
+		margin-right: 50px;
+		cursor: pointer;
+		font-size: 12px;
+	}
+	.input4{
+       width: 120px;
+	}
+	.tu-yanzheng{
+		width:50px;
+		height: 22px;
+		float: left;
+		margin-left: 5px;
+	    margin-bottom: 40px;
+	    position: absolute;
+	    left: 230px;
+	    top: 10px;
+	}
+	.tu-yanzheng img{
+		height: 22px;
+		cursor: pointer;
+		text-align: center;
+	}

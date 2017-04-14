@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link rel="stylesheet" href="/Content/common.css">
+	<link rel="stylesheet" href="/Content/login.css">
+	<script src="/Scripts/jquery-1.8.3.min.js"></script>
+	<script src="/Scripts/Code/login.js"></script>
+	<title>登录及注册</title>
+</head>
+
+<body>
+	
+	<form class="form">
+		<div class="screen">
+			<div class="logo">
+				<div class="inner-logo">
+					<img src="/Images/Author/logo.png" alt="">
+				</div>
+				<p class="logo-p">
+					智百验证交易平台
+				</p>
+			</div>
+			<div class="img"><img src="/Images/Author/denglu.png" alt=""></div>
+			<div class="box">
+				<li style="margin-top:10px">
+					<p>账号</p>
+					<input class="input" type="text" name="UserName">
+					<p></p><span class="bottom-p p1"></span>
+				</li>
+				<li>
+					<p>密码</p>
+					<input class="input1" type="password" name="UserPass">
+					<p></p><span class="bottom-p p2"></span>
+				</li>
+				<li>
+					<p>验证码</p>
+					<input class="input2" type="text" name="ValiCode">
+					<div class="tu-yanzheng">
+						<img class="tu" title="点击切换图片" src="/Index/ValiCode" alt="">
+					</div>
+					<p></p><span class="bottom-p p3"></span>
+				</li>
+		        
+		        <div class="box-bottom">
+		        	<input class="button" type="button" value="登录">
+		            <input class="button1" type="button" value="注册">
+		            <div class="p4">
+		            	
+		            </div>
+		        </div>
+		        
+		        <p class="pp"></p>
+		        <a href="forget.html" style="color:#3E19FD;font-size:12px">忘记密码</a>
+		    </div>
+		</div>	
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .box{
+        width: 800px;
+        height: auto;
+        margin: 10px auto;
+    }
+    video{
+        width: 100%;
+    }
+    .controll{
+        background: #333;
+        display: flex;
+        align-items: center;
+        height: 30px;
+    }
+    .play{
+        width: 20px;
+        height: 20px;
+        padding-left: 10px;
+    }
+    .replay{
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        margin-left: 10px;
+        background: #fff;
+    }
+    @font-face {
+        font-family: 'iconfont';
+        src: url('icon/iconfont.eot');
+        src: url('icon/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('icon/iconfont.woff') format('woff'),
+        url('icon/iconfont.ttf') format('truetype'),
+        url('icon/iconfont.svg#iconfont') format('svg');
+    }
+    .play,.voice,.fullpage{
+        font-family:"iconfont" !important;
+        font-size:20px;font-style:normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+        color: #fff;
+        cursor: pointer;
+    }
+    .progress{
+        width: 400px;
+        height: 10px;
+        background: #fff;
+        border: 1px solid #00CC00;
+        margin-left: 10px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .inner{
+        height: 10px;
+        width: 0;
+        background: blue;
+    }
+    .time{
+        margin-left: 10px;
+        color:#fff;
+    }
+    .volume{
+        width: 150px;
+        height: 30px;
+        line-height: 35px;
+        margin-left: 30px;
+    }
+    .soundbox{
+        width: 120px;
+        height: 6px;
+        border: 1px solid #0B75AF;
+        border-radius: 3px;
+        margin: 12px 0;
+        float: right;
+    }
+    .fullpage{
+        margin-left: 10px;
+    }
+    .soundsize{
+        height: 100%;
+        background: red;
+    }
+</style>
+<body>
+<div class="box">
+    <video src="demo1.mp4" ></video>
+    <div class="controll">
+        <div class="play">&gt;</div>
+        <div class="replay"></div>
+        <div class="progress">
+            <div class="inner"></div>
+        </div>
+        <div class="time">
+            <span class="now">00:00</span>/
+            <span class="total">00:00</span>
+        </div>
+        <div class="volume">
+            <span class="voice">&copy;</span>
+            <div class="soundbox"><div class="soundsize"></div></div>
+        </div>
+        <div class="fullpage">&lt;</div>
+    </div>
+</div>
+<div class="box">
+    <iframe src="demo1.mp4" frameborder="0"></iframe>
+</div>
+</body>
+<script>
+    function setzero(time){     //时间
+        if(time<10){
+            time='0'+time;
+        }
+        return time;
+    }
+    function writeTime(obj,time){     //转化
+        var h=setzero(parseInt(time/3600));
+        var m=setzero(parseInt(time%3600/60));
+        var s=setzero(parseInt(time%60));
+        if(h!=0){
+            obj.innerHTML=h+':'+m+':'+s;
+        }else{
+            obj.innerHTML=m+':'+s;
+        }
+    }
+    function playstate(){       //播放
+        if(flag){
+            play.innerHTML="&#xe640;";
+            video.play();
+        }else{
+            play.innerHTML="&gt;";
+            video.pause();
+        }
+        flag=!flag;
+    };
+    var play=document.querySelector('.play');
+    var video=document.querySelector('video');
+    var replay=document.querySelector('.replay');
+    var progress=document.querySelector('.progress');
+    var pwidth=progress.offsetWidth;
+    var inner=document.querySelector('.inner');
+    var now=document.querySelector('.now');
+    var total=document.querySelector('.total');
+    var soundbox=document.querySelector('.soundbox');
+    var sound=document.querySelector('.soundsize');
+    var swidth=sound.offsetWidth;
+    var voice=document.querySelector('.voice');
+    var fullpage=document.querySelector('.fullpage');
+    var flag=true,volflag=true,scrflag=true;
+    var duration;
+    var current;
+    sound.style.width=video.volume*swidth;
+    voice.onclick=function(){      //播放
+        if(volflag){
+            this.innerHTML="&nap;";
+            video.volume=0;
+        }else{
+            this.innerHTML="&copy;";
+            video.volume=1;
+        }
+        volflag=!volflag;
+    }
+    play.onclick= playstate;
+    video.onclick=playstate;
+    progress.onclick=function(e){   //拖拽
+        var ev=e||window.event;
+        var nowwidth=ev.offsetX;
+        inner.style.width=nowwidth+'px';
+        var bili=nowwidth/pwidth;
+        video.currentTime=(bili*duration);
+        progress.onmousedown=function(e){
+            this.onmousemove=function(e){
+                var ev=e||window.event;
+                nowwidth=ev.offsetX;
+                inner.style.width=nowwidth+'px';
+                var bili=nowwidth/pwidth;
+                video.currentTime=(bili*duration);
+            }
+        }
+    };
+    video.oncanplay=function(){
+        duration=video.duration;
+        writeTime(total,duration);
+    };
+    video.ontimeupdate=function(){
+        current=video.currentTime;
+        var bili=current/duration*100;
+        inner.style.width=bili+'%';
+        writeTime(now,current);
+    };
+    replay.onclick=function(){
+        video.load();
+        play.innerHTML="&#xe640;";
+        video.play();
+        flag=false;
+    };
+    
+    soundbox.onclick=function(e){    //声音
+        var ev=e||window.event;
+        var nowwidth=ev.offsetX;
+        sound.style.width=nowwidth+'px';
+        var bili=nowwidth/swidth;
+        video.volume=bili;
+        voice.innerHTML="&copy;";
+        volflag=false;
+        if(bili==0){
+            voice.innerHTML="&nap;";
+            volflag=true;
+        }
+        soundbox.onmousedown=function(e){
+            this.onmousemove=function(e){
+                var ev=e||window.event;
+                nowwidth=ev.offsetX;
+                sound.style.width=nowwidth+'px';
+                var bili=nowwidth/pwidth;
+                video.volume=bili;
+                voice.innerHTML="&copy;";
+                volflag=false;
+                if(bili==0){
+                    voice.innerHTML="&nap;";
+                    volflag=true;
+                }
+            }
+        }
+    }
+    document.onmouseup=function(){
+        progress.onmousedown=null;
+        progress.onmousemove=null;
+        soundbox.onmousedown=null;
+        soundbox.onmousemove=null;
+    }
+    fullpage.onclick=function(){       //全频
+        if(scrflag){
+            this.innerHTML="&#xe61e;";
+            video.webkitRequestFullScreen();
+            video.mozRequestFullScreen();
+        }else{
+            document.webkitCancelFullScreen()
+            document.mozCancelFullScreen()
+        }
+        scrflag=!scrflag;
+    }
+    document.addEventListener('webkitfullscreenchange', function(){
+        if(!document.webkitIsFullScreen){
+            fullpage.innerHTML="&#xe917;";
+            scrflag=true;
+        }
+    })
+    
+</script>
+</html>

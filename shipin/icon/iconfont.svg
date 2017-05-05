@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20120731 at Mon Nov  7 01:07:12 2016
+ By admin
+</metadata>
+<defs>
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face 
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    panose-1="2 0 6 3 0 0 0 0 0 0"
+    ascent="896"
+    descent="-128"
+    x-height="792"
+    bbox="44 -147.294 959 792"
+    underline-thickness="0"
+    underline-position="0"
+    unicode-range="U+0078-E640"
+  />
+<missing-glyph 
+ />
+    <glyph glyph-name=".notdef" 
+ />
+    <glyph glyph-name=".notdef" 
+ />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" horiz-adv-x="341" 
+ />
+    <glyph glyph-name="x" unicode="x" horiz-adv-x="1001" 
+d="M281 543q-27 -1 -53 -1h-83q-18 0 -36.5 -6t-32.5 -18.5t-23 -32t-9 -45.5v-76h912v41q0 16 -0.5 30t-0.5 18q0 13 -5 29t-17 29.5t-31.5 22.5t-49.5 9h-133v-97h-438v97zM955 310v-52q0 -23 0.5 -52t0.5 -58t-10.5 -47.5t-26 -30t-33 -16t-31.5 -4.5q-14 -1 -29.5 -0.5
+t-29.5 0.5h-32l-45 128h-439l-44 -128h-29h-34q-20 0 -45 1q-25 0 -41 9.5t-25.5 23t-13.5 29.5t-4 30v167h911zM163 247q-12 0 -21 -8.5t-9 -21.5t9 -21.5t21 -8.5q13 0 22 8.5t9 21.5t-9 21.5t-22 8.5zM316 123q-8 -26 -14 -48q-5 -19 -10.5 -37t-7.5 -25t-3 -15t1 -14.5
+t9.5 -10.5t21.5 -4h37h67h81h80h64h36q23 0 34 12t2 38q-5 13 -9.5 30.5t-9.5 34.5q-5 19 -11 39h-368zM336 498v228q0 11 2.5 23t10 21.5t20.5 15.5t34 6h188q31 0 51.5 -14.5t20.5 -52.5v-227h-327z" />
+    <glyph glyph-name="bofang" unicode="&#xe640;" 
+d="M648 702h123v-753h-123v753zM253 702h123v-753h-123v753z" />
+    <glyph glyph-name="video" unicode="&#xe615;" 
+d="M393 737q94 25 196.5 7.5t180.5 -75.5q60 -41 103.5 -101.5t64.5 -129t21 -143t-24 -142.5q-30 -87 -94.5 -157t-149.5 -106q-71 -32 -151.5 -36.5t-155 16.5t-140 67.5t-108.5 111.5q-55 80 -70.5 182.5t11.5 196.5q31 112 117.5 196t198.5 113zM498 709
+q-97 -2 -184.5 -51t-143.5 -132.5t-65 -179.5q-11 -79 14 -158t74 -140t121 -102.5t152 -48.5q80 -11 160 15t141.5 77t102 125t45.5 155q9 85 -22 168t-89 144t-139.5 96.5t-166.5 31.5zM387 515q237 -141 352 -214q-55 -34 -172 -104t-176 -108q-4 62 -4.5 134.5
+t0.5 156.5t0 135z" />
+  </font>
+</defs></svg>

@@ -1,0 +1,26 @@
+/* 
+* @Author: Marte
+* @Date:   2017-02-09 15:22:51
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-02-09 15:44:56
+*/
+.wrap>*{
+    color: #333;
+     padding: 20px;
+}
+.wrap h3{
+    font-size: 40px;
+    color: #333333;
+    line-height: 100px;
+    text-align: center;
+    border-bottom: 1px solid #dadada;
+    padding-top: 18px;
+}
+.wrap h4{
+    font-size: 30px;
+    font-weight: normal;
+}
+.wrap p{
+    line-height: 42px;
+    font-size: 24px;
+}

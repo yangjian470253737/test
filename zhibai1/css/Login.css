@@ -1,0 +1,135 @@
+.wwz_contain{
+	overflow: hidden;
+}
+.login_title{
+	margin:0 auto;
+	margin-top:159px;
+	margin-bottom:154px;
+}
+.login_title h1{
+	margin: 0 auto;
+	color:#1591ff;
+	font-size: 106px;
+	width: 225px;
+	height: 106px;
+	line-height: 99px;
+	margin-bottom:28px;
+}
+.login_title h2{
+	font-size: 31px;
+	color:#1591ff;
+	width: 101px;
+	line-height: 30px;
+	height: 31px;
+	margin:auto;
+	font-weight: normal;
+}
+.login_box{
+	margin: 0 auto;
+	overflow: hidden;
+}
+.txt_box{
+	position: relative;
+}
+.userName{
+	text-align: center;
+	font-size: 24px;
+	outline: none;
+	margin-bottom: 40px;
+	height: 50px;
+	width: 481px;
+	color:#c9c9c9;
+	padding:15px 53px 15px 66px;
+	border-bottom:1px solid #1591ff;
+}
+.login_box b{
+	position: absolute;
+	font-weight: normal;
+	line-height: 29px;
+	font-size: 22px;
+	border-radius: 50%;
+	top: 26px;
+    right: 88px;
+	width: 29px;
+	background-color: #6D6D6D;
+	color:#fff;
+}
+.login_box .C_pwd{
+	top: 149px;
+    right: 88px;
+}
+.checkBox{
+	float: left;
+	height: 23px;
+	width: 23px;
+	border:1px solid #757575;
+	border-radius: 1px;
+	background-color: #fff;
+	-webkit-appearance:checkbox;
+}
+.passWord{
+	text-align: center;
+	font-size: 24px;
+	outline: none;
+	height: 50px;
+	width: 481px;
+	color:#5f5f5f;
+	padding:15px 53px 15px 66px;
+	border-bottom:1px solid #1591ff;
+	margin-bottom: 0;
+}
+.login_box span{
+	line-height: 22px;
+	font-size: 22px;
+	color: #808080;
+	float: left;
+	margin-right: 24px;
+}
+.rem{
+	padding:30px 0;
+	margin:0 auto;
+	width:600px;
+	height: 22px;
+	overflow: hidden;
+}
+.login_btn{
+	width: 600px;
+	height: 80px;
+	background-color:#199fff;
+	border:1px solid #199fff;
+	border-radius: 5px;
+	margin-bottom: 40px;
+	font-size: 28px;
+	color: #fff;
+}
+.register{
+	color:#199fff;
+	background-color: #fff;
+}
+.login_box p{
+	color: #525252;
+	font-size: 26px;
+}
+.footer{
+	overflow: hidden;
+	width: 500px;
+	margin:0 auto;
+	margin-top: 158px;
+	margin-bottom: 0px;
+	color: #b5b5b5;
+	font-size:28px;
+}
+.footer p{
+	padding:0 12px;
+	width: 229px;
+}
+.footer p,.line{
+	float: left;
+}
+.line{
+	border-top: 2px solid #b5b5b5;
+	height: 1px;
+	width: 122px;
+	position:relative;
+	top:23px;
+}

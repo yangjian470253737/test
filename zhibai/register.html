@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="css/common.css"/>
     <link rel="stylesheet" href="css/protocol.css"/>
     <link rel="stylesheet" href="css/login.css"/>
-    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
     <script>
         var phoneWidth =  parseInt(window.screen.width);
         var phoneScale = phoneWidth/750;
@@ -56,30 +56,70 @@
             document.write('<meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi">');
         }
     </script>
-    <script type="text/javascript" src="js/login.js"></script>
+    <link rel="stylesheet" href="css/register.css" />
+    <script src="js/register.js" type="text/javascript"></script>
 </head>
 <body>
-	<div class="popup"></div>
-    <div class="popup-inner-loading">
-        <img src="images/loading.gif" alt="" />
-    </div>
-	<div class="tip">
-		账号或密码错误
-	</div>
     <div id="wrap" class="wrap">
          <div class="contain wwz_contain" >
-            <div class="login_title"><h1>智百</h1><h2>zhibai</h2></div>
-            <div class="login_box">
-                <div class="txt_box">
-                    <input id="userName" name="UserName" class="txt" type="text" value="" placeholder="请输入账号"/><!--<b id="C_user">X</b>-->
-                    <input id="passWord" name="UserPass" class="txt txt2" type="password" value="" placeholder="请输入密码"/><!--<b id="C_pwd">X</b>-->
-                </div>
-                <div class="rem"><span>记住密码</span><input class="checkBox" name="rem" type="checkbox" value="记住密码"/></div>
-                <button class="login_btn" id="login">登录</button>
-                <button class="login_btn register">注册</button>
-                <p>忘记密码?</p>
+            <div class="Re_header">
+            	<div class="Re_return"></div>
+            	<h1>账户注册</h1>
             </div>
-            <div class="footer"><div class="line"></div><p>智百验证交易平台</p><div class="line"></div></div>
+            <div class="Re_base">
+            	<h2 class="h2_style">基础信息:</h2>
+            	<input class="userName" type="text" value="请输入用户名"/>
+            	<input class="password" type="text" value="请输入用户密码"/>
+            	<div class="Code_box">
+            	<input class="testCode" type="text" value="请输入验证码"/><div class="imgCode"></div>
+            	</div>
+            </div>
+            <div class="Re_protect">
+            	<h2 class="h2_style">设置密保:</h2>
+            	<p>请填写密保问题,为了避免遗忘,请填写真实信息,这将帮助您以后通过回答问题迅速找回密码</p>
+            
+            		<div class="select_box">
+            			<div class="problem_box">
+		            		<span>问题一 :</span>
+		            		<div>
+			            		请选择密保问题<b></b>
+			            	</div>
+	            		</div>
+	            		<div class="problem_box anwser">
+	            			<span>答案 :</span><input type="text"/>
+	            		</div>
+            		</div>
+            		
+            		<div class="select_box">
+            			<div class="problem_box">
+		            		<span>问题一 :</span>
+		            		<div>
+			            		请选择密保问题<b></b>
+			            	</div>
+	            		</div>
+	            		<div class="problem_box anwser">
+	            			<span>答案 :</span><input type="text"/>
+	            		</div>
+            		</div>
+            		
+            		<div class="select_box">
+            			<div class="problem_box">
+		            		<span>问题一 :</span>
+		            		<div>
+			            		请选择密保问题<b></b>
+			            	</div>
+	            		</div>
+	            		<div class="problem_box anwser">
+	            			<span>答案 :</span><input type="text"/>
+	            		</div>
+            		</div>
+            		
+            		
+  
+            </div>
+            <div class="Re_footer">
+            	<button>注册</button>
+            </div>
         </div>
     </div>
 </body>

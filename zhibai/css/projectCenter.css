@@ -1,0 +1,132 @@
+/*header*/
+body{
+	background: #F0F0F0;
+}
+.wwz_contain{
+	overflow: hidden;
+	padding: 0;
+	background-color: #F0F0F0;
+}
+
+.Re_header,.Re_base,.Re_protect,.Re_footer{
+	overflow: hidden;
+	margin:0 auto;
+}
+.Re_base,.Re_protect{
+	width: 600px;
+}
+.Re_header,.Re_footer{
+	color:#fff;
+	background-color:#1592ff;
+}
+.Re_header{
+	position: relative;
+	padding:27px 0;
+	padding-top:45px;
+	height: 48px;
+}
+.Re_return{
+	position: absolute;
+	top: 39px;
+	height:56px;
+	width: 56px;
+	line-height: 56px;
+	left: 27px;
+	font-weight: normal;
+	font-size: 56px;
+	cursor: pointer;
+	background: url(../images/return.png) no-repeat  14px 9px;
+}
+.Re_header h1{
+	font-size: 30px;
+	font-weight: normal;
+}
+
+/*footer*/
+.Re_footer{
+	width: 100%;
+	height: 98px;
+	background-color:#FCFCFC;
+	border-top: 1px solid #CECECE;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+.Re_footer a{
+	float: left;
+	position: relative;
+	height: 19px;
+	font-size: 19px;
+	line-height: 19px;
+	padding-top:50px;
+	font-weight: bold;
+	margin-top: 19px;
+}
+.Re_footer b{
+	position: absolute;
+	left: 17px;
+    top: -5px;
+	height: 46px;
+	width:45px;
+	background: url(../images/icon_list.png) no-repeat -85px 0px;
+}
+.Re_footer .first b{
+	background-position:-85px -54px;
+}
+.Re_footer .center b{
+	background-position:3px 0px;
+}
+.Re_footer .right b{
+	width: 42px;
+	background-position:-42px -1px;
+}
+.Re_footer a:hover{
+	color: #999;
+}
+.first{
+	margin-left: 86px;
+}
+.center{
+	margin-right: 176px;
+	margin-left: 176px;
+}
+.main_box {
+    height:auto;
+}
+.main{
+	width: 482px;
+	margin:0 auto;
+	padding-top: 119px;
+}
+.main h2{
+	font-weight: normal;
+	font-size: 24px;
+	color: #B3B3B3;
+	padding-top: 154px;
+	background: url(../images/create.png) no-repeat 187px 12px;
+}
+.main button{
+	border-radius: 5px;
+	height: 80px;
+	width: 330px;
+	border:1px solid #2A77BD;
+	background-color: #1592FF;
+	font-size: 28px;
+	color: #fff;
+	margin-top: 50px;
+}
+ .movebox{
+      height:100px;
+      width:850px;
+      padding:0;
+      position:relative;
+      left:0;
+    }
+    .movebox li{
+      height:100px;
+      float:left;
+      list-style:none;
+      font-size:30px;
+      color:#fff;
+    }

@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="css/common.css"/>
     <link rel="stylesheet" href="css/protocol.css"/>
     <link rel="stylesheet" href="css/login.css"/>
-    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
     <script>
         var phoneWidth =  parseInt(window.screen.width);
         var phoneScale = phoneWidth/750;
@@ -56,30 +56,58 @@
             document.write('<meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi">');
         }
     </script>
-    <script type="text/javascript" src="js/login.js"></script>
+    <link rel="stylesheet" href="css/projectCenter.css" />
+    <link rel="stylesheet" href="css/ProjectDetail.css" />
 </head>
 <body>
-	<div class="popup"></div>
-    <div class="popup-inner-loading">
-        <img src="images/loading.gif" alt="" />
-    </div>
-	<div class="tip">
-		账号或密码错误
-	</div>
     <div id="wrap" class="wrap">
          <div class="contain wwz_contain" >
-            <div class="login_title"><h1>智百</h1><h2>zhibai</h2></div>
-            <div class="login_box">
-                <div class="txt_box">
-                    <input id="userName" name="UserName" class="txt" type="text" value="" placeholder="请输入账号"/><!--<b id="C_user">X</b>-->
-                    <input id="passWord" name="UserPass" class="txt txt2" type="password" value="" placeholder="请输入密码"/><!--<b id="C_pwd">X</b>-->
-                </div>
-                <div class="rem"><span>记住密码</span><input class="checkBox" name="rem" type="checkbox" value="记住密码"/></div>
-                <button class="login_btn" id="login">登录</button>
-                <button class="login_btn register">注册</button>
-                <p>忘记密码?</p>
+            <div class="Re_header">
+            	<div class="Re_return"></div>
+            	<h1>项目详情</h1>
+            	<div class="PD_more">.<br />.<br />.<br /></div>
+            	<div class="more_option">
+            		<ul>
+            			<li><a href="##">编辑项目</a></li>
+            			<li><a href="##">查看事件</a></li>
+            			<li><a href="##">查看激活码</a></li>
+            		</ul>
+            	</div>
             </div>
-            <div class="footer"><div class="line"></div><p>智百验证交易平台</p><div class="line"></div></div>
+            <div class="main_box">
+		            <div class="PD_main PD_main_first">
+		            	<span>项目名称:</span><input type="text" value="多玩网络游戏专用插件"/>
+		            </div>
+		            <div class="PD_main">
+		            	<span>创建日期:</span><input type="text" value="多玩网络游戏专用插件"/>
+		            </div>
+		            <div class="PD_main">
+		            	<span>项目名称:</span><input type="text" value="多玩网络游戏专用插件"/>
+		            </div>
+		            <div class="PD_main">
+		            	<span>项目名称:</span><input type="text" value="多玩网络游戏专用插件"/>
+		            </div>
+		            <div class="PD_main">
+		            	<span>项目名称:</span><input type="text" value="多玩网络游戏专用插件"/>
+		            </div>
+		            <div class="PD_main">
+		            	<span>项目名称:</span><input type="text" value="多玩网络游戏专用插件"/>
+		            </div>
+		            <div class="PD_main">
+		            	<span>项目名称:</span><input type="text" value="多玩网络游戏专用插件"/>
+		            </div>
+		            <div class="PD_main">
+		            	<span>项目名称:</span><input type="text" value="多玩网络游戏专用插件"/>
+		            </div>
+		            <div class="PD_main PD_main_last">
+		            	<span>项目描述:</span><br /><textarea rows="5" cols="24">好，很好，非常好。</textarea>
+		            </div>
+            </div>
+            <!--<div class="Re_footer">
+            	<a class="first" href="##">项目中心</a>
+            	<a class="center" href="##">设备列表</a>
+            	<a class="right" href="##">我的信息</a>
+            </div>-->
         </div>
     </div>
 </body>

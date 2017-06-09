@@ -1,0 +1,246 @@
+﻿@charset "utf-8";
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+/* 去除iPhone中默认的input样式 */
+input[type="submit"],
+
+input[type="reset"],
+
+input[type="button"],
+
+input{-webkit-appearance:none; resize: none;}
+/* 取消链接高亮  */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article, 
+aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); }
+/* 设置HTML5元素为块 */
+article, aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section {
+display: block;
+}
+/* 图片自适应 */
+img {
+max-width: 100%;
+height: auto;
+width:auto\9; /* ie8 */
+-ms-interpolation-mode:bicubic;/*为了照顾ie图片缩放失真*/
+/*display:block;*/
+vertical-align: top;
+}
+/* 初始化 */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article, 
+aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section{margin:0; padding:0; border:none;}
+body{font: normal 14px/1.5 Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei;}
+em,i{font-style:normal;}
+strong{font-weight: normal;}
+.clearfix:after{content:""; display:block; visibility:hidden; height:0; clear:both;}
+.clearfix{zoom:1;}
+a{text-decoration:none; color:#969696; font-family: '宋体',Microsoft YaHei,Tahoma,Arial,sans-serif;}
+a:hover{color:#fff; text-decoration:none;}
+ul,ol{list-style:none;}
+h1, h2, h3, h4, h5, h6{ font-size:100%; font-family: Microsoft YaHei;}
+
+
+/*首页样式*/
+html,body{height:100%;}
+#wrap{
+    margin:0 auto;
+    width:750px;
+    position:relative;
+}
+.wrap{
+  min-height:100%;
+}
+
+
+.wrap .contain>div{
+    text-align: center;
+}
+.wrap .contain>div img{
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/*phone*/
+.box2{
+    position: relative;
+}
+.box2 #tel{
+    width: 317px;
+    height: 64px;
+    line-height: 64px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    outline: none;
+    margin-left: -344px;
+    text-align: center;
+    font-size: 26px;
+    color: #fff;
+    background: none;
+}
+.box2 .tel_btn{
+    width: 316px;
+    height: 67px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    outline: none;
+    background: url(../images/btn-01.gif) no-repeat;
+    margin-left: 27px;
+    cursor: pointer;
+}
+.box3{
+    position: relative;
+}
+.box3 #box3-vid{
+    width: 720px;
+    height: 366px;
+    position: absolute;
+    bottom: 6.5px;
+    left: 50%;
+    margin-left: -360px;
+    border-radius: 5px;
+    border: 4px solid #000;
+}
+.box3 #box3-vid iframe{
+    border: none;
+}
+
+.box7{
+    position: relative;
+}
+.box7 .focusD{ width:742px; height:496px;  margin:0 auto; position:absolute;bottom: 12px; left: 50%;margin-left: -371px;}
+.box7 .focusD .hd{ width:750px; height:51px;  position:absolute; z-index:1; left: 50%; margin-left: -375px; top: -63px; text-align:center;  }
+.box7 .focusD .hd ul{ overflow:hidden; display:-moz-box; display:-webkit-box; display:box; height:51px;}
+.box7 .focusD .hd ul li{margin-right: 10px; width: 243px;background: url(../images/bg_11.jpg) no-repeat;font-size: 22px;font-weight: bold;line-height: 51px;color: #540f0f;}
+.box7 .focusD .hd ul li.on{background: url(../images/bg_09.jpg) no-repeat;color: #011268;}
+.box7 .focusD .bd{ position:relative; z-index:0;border: 3px solid #000;border-radius: 5px;overflow: hidden;}
+.box7 .focusD .bd li img{ width:100%;}
+.box7 .focusD .bd li a{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */ }
+
+.box8{
+    position: relative;
+}
+.box8 .pic-gif{
+    width: 696px;
+    height: 448px;
+    background: pink;
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    margin-left: -348px;
+}
+
+
+.box10{
+    position: relative;
+}
+.box10 .focus{ width:718px; height:443px;  margin:0 auto; position:absolute;bottom: 10px; left: 50%;margin-left: -359px;}
+.box10 .focus .hd{ width:726px; height:37px;  position:absolute; z-index:1; left: 50%; margin-left: -363px; top: -44px; text-align:center;  }
+.box10 .focus .hd ul{ overflow:hidden; display:-moz-box; display:-webkit-box; display:box; height:37px;}
+.box10 .focus .hd ul li{margin-right: 2px; width: 143px;background: url(../images/bgt_25.jpg) no-repeat;font-size: 22px;font-weight: bold;line-height: 37px;color: #300000;}
+.box10 .focus .hd ul li.on{background: url(../images/bgt_23.jpg) no-repeat;color: #fff;}
+.box10 .focus .bd{ position:relative; z-index:0; }
+.box10 .focus .bd li a{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */ }
+
+.box13{
+    position: relative;
+}
+.box13 #tel2{
+    width: 317px;
+    height: 64px;
+    line-height: 64px;
+    position: absolute;
+    left: 50%;
+    bottom: 53px;
+    outline: none;
+    margin-left: -349px;
+    text-align: center;
+    font-size: 26px;
+    color: #fff;
+    background: none;
+}
+.box13 #btn_2{
+    width: 316px;
+    height: 67px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    outline: none;
+    background: url(../images/btn-01.gif) no-repeat;
+    margin-left: 27px;
+    cursor: pointer;
+}
+
+
+.poup_box{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+    display: none;
+}
+.poup_box .poup_bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    filter: Alpha(opacity=60);
+    opacity: 0.7;
+    height: 100%;
+    width: 100%;
+}
+.poup{
+    width: 600px;
+    height: 348px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -300px;
+    margin-top: -174px;
+    z-index: 99;
+    background: #fff;
+    display: block;
+}
+.poup .dark{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.poup h2{
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+    background: #ce1212;
+    color:#fff;
+    font-weight: bold;
+}
+.poup .cn-d{
+    font-size: 26px;
+    padding: 20px;
+    line-height: 38px;
+    color: #484848;
+}
+.poup .cn-d span{
+    color: #ce1212;
+    font-weight: bold;
+}
+.poup .cn-d .btn{
+    text-align: center;
+    margin-top: 16px;
+    background: #ce1212;
+    width: 200px;
+    height: 60px;
+    margin: 5px auto;
+    font-size: 34px;
+    line-height: 58px;
+    color: #fff;
+    border-radius: 10px;
+}

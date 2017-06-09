@@ -1,0 +1,9 @@
+.box1,.box2,.box3,.box4,.box5{
+	width: 740px;
+	height: 200px;
+	background: red;
+	border: 5px solid #000;
+	margin:5px auto;
+
+}
+

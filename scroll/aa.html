@@ -33,12 +33,10 @@ console.log(Wheight);
 var Cheight=$('.menu-tab').height();
 console.log(Cheight);
 $(window).on('scroll', function(event) {
-    // event.preventDefault();
+    event.preventDefault();
     var srcollTop = $(window).scrollTop();
-    console.log(srcollTop);
     var height=Cheight-Wheight;
-    console.log(height);
-
+    alert("滑动");
     if (srcollTop >= height) {
        $('.menu-tab').css({
         "background":"blue"

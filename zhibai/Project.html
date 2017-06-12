@@ -38,9 +38,12 @@
     <meta name="msapplication-tap-highlight" content="no">
     <!-- 适应移动端end -->
     <link rel="stylesheet" href="css/common.css"/>
-    <link rel="stylesheet" href="css/protocol.css"/>
-    <link rel="stylesheet" href="css/login.css"/>
-    <script src="js/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="css/Project.css"/>
+    <link rel="stylesheet" href="css/jquerymobile.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.js"></script>
+    <script src="js/Project.js"></script>
     <script>
         var phoneWidth =  parseInt(window.screen.width);
         var phoneScale = phoneWidth/750;
@@ -56,58 +59,58 @@
             document.write('<meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi">');
         }
     </script>
-    <link rel="stylesheet" href="css/projectCenter.css" />
-    <link rel="stylesheet" href="css/CreatProject.css" />
 </head>
 <body>
     <div id="wrap" class="wrap">
          <div class="contain wwz_contain" >
-         	<div class="mask"></div>
-         	<div class="mask_box">
-	         	<h1>取消创建</h1>
-	         	<p>距离成功创建项目就差一小步了，确定离开吗？</p>
-	         	<div class="button_box">
-	         		<button class="yes">确定</button><button class="no">取消</button>
-	         	</div>
-         	</div>
-         	
-            <div class="Re_header">
-            	<div class="Re_return"></div>
+         	<div class="tip">
+	        </div>
+	        <div class="Re_header-fixed">
             	<h1>项目中心</h1>
+            	<div class="CreateProject">
+            		创建项目
+            	</div>
+            </div>
+            <div class="Re_header">
             </div>
             <div class="main_box">
 	            <div class="main">
-	            	<div class="content">
-	            		<span>项目名称:</span><input type="text" value="请输入项目名称"/>
-	            	</div>
-	            	<div class="content">
-	            		<span>版&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本:</span><input type="text" value="请输入版本信息"/>
-	            	</div>
-	            	<div class="content">
-	            		<span>所属平台:</span><br />
-	            		<div>请选择技术语言<b></b></div>
-	            		<div>请选择所属种类<b></b></div>
-	            	</div>
-	            	<div class="content Cp_content_last">
-	            		<span>项目描述:</span><br />
-	            		<textarea rows="4" cols="20">请输入项目描述...</textarea>
-	            	</div>
-	            	
+	            	<h2>您还没有创建项目,点我立即创建</h2>
+	            	<button>创建项目</button>
 	            </div>
-	            <h2>智百验证平台<br />V2.01</h2>
+            </div>
+            <div class="main_box1">
+            	<div data-role="page" id="pageone">
+                    <div data-role="main" class="ui-content">
+                        <div class="box" id="box">
+                         
+                        </div>
+                    </div>
+                    <div data-role="footer">
+                        <h1>页脚文本</h1>
+                    </div>
+                </div> 
             </div>
             <div class="Re_footer">
-            	<button>创建项目</button>
+            	<a class="first" href="##">项目中心<b></b></a>
+            	<a class="center" href="##">设备列表<b></b></a>
+            	<a class="right" href="##">我的信息<b></b></a>
             </div>
         </div>
     </div>
 </body>
 <script type="text/javascript">
+var p=1;
+//  获取token
+    var tokenData=localStorage.zhibaitoken?JSON.parse(localStorage.zhibaitoken):[];
+    var token=tokenData.zhibaitoken;
+    
     if(navigator.appVersion.indexOf('Android') != -1){
         document.addEventListener("DOMContentLoaded",function(e){
             document.getElementById('wrap').style.zoom = e.target.activeElement.clientWidth/750;
         });
     };
+   
 </script>
 
 </html>

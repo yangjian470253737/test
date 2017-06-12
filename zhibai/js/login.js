@@ -59,13 +59,16 @@ $(function(){
                 $.post("http://localhost:25000/api/account/Login", obj,
                     function (data) {
                         if (data.issuccess == 1) {
+                        	var tokenobj={};
+                        	tokenobj["zhibaitoken"] = data.message;
                         	if($(".checkBox").is(':checked')){
                         		localStorage.zhibaiUser=JSON.stringify(obj);
+                        		localStorage.zhibaitoken=JSON.stringify(tokenobj);
                         	}else{
                         		localStorage.zhibaiUser=JSON.stringify("");
+                        		localStorage.zhibaitoken=JSON.stringify(tokenobj);
                         	}
-                            token = data.message;
-                            document.location = "projectCenter.html";
+                            document.location = "Project.html";
                         } else {
                             flag = true;
                             $(".popup-inner-loading").hide();

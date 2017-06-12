@@ -39,8 +39,9 @@
     <!-- 适应移动端end -->
     <link rel="stylesheet" href="css/common.css"/>
     <link rel="stylesheet" href="css/protocol.css"/>
-    <link rel="stylesheet" href="css/login.css"/>
+    <link rel="stylesheet" href="css/CreateProject.css"/>
     <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/CreateProject.js"></script>
     <script>
         var phoneWidth =  parseInt(window.screen.width);
         var phoneScale = phoneWidth/750;
@@ -56,33 +57,66 @@
             document.write('<meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi">');
         }
     </script>
-    <link rel="stylesheet" href="css/projectCenter.css" />
 </head>
 <body>
     <div id="wrap" class="wrap">
+    	<div class="mask"></div>
          <div class="contain wwz_contain" >
-            <div class="Re_header">
-            	<!--<div class="Re_return"></div>-->
+         	
+         	<div class="tip">
+	        </div>
+	        <div class="Re_header-fixed">
             	<h1>项目中心</h1>
+            	<div style="font-size: 26px;color: #ffffff;text-align:left;margin-left: 36px;line-height: 40px;">
+            		<div style="width: 49px;height: 49px;" id="fanhui">
+            			<img style="width: 49px;height: 49px;" src="images/fanhui.png" alt="" />
+            		</div>
+            	</div>
             </div>
-            <!--<div class="main_box">
-	            <div class="main">
-	            	<h2>您还没有创建项目,点我立即创建</h2>
-	            	<button>创建项目</button>
-	            </div>
-            </div>-->
+            <div class="Re_header">
+            </div>
+         	<div class="mask_box">
+	         	<h1>取消创建</h1>
+	         	<p>距离成功创建项目就差一小步了，确定离开吗？</p>
+	         	<div class="button_box">
+	         		<button class="yes">确定</button><button class="no">取消</button>
+	         	</div>
+         	</div>
+         
             <div class="main_box">
-            <div class="box">
-                <ul class="movebox" style="transition-duration:0.2s;transform: translateX(-0px);">
-                    <li style="background:#ffffff;width: 750px">1</li>
-                    <li style="background:#ff3b2f;width: 100px;font-size: 20px;text-align: center;line-height: 100px;">删除</li>
-                </ul>
-            </div>
+	            <div class="main">
+	            	<div class="content">
+	            		<span>项目名称:</span><input type="text" placeholder="请输入项目名称"/>
+	            	</div>
+	            	<div class="content">
+	            		<span>版&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本:</span><input type="text" placeholder="请输入版本信息"/>
+	            	</div>
+	            	<div class="content">
+	            		<span>所属平台:</span><br />
+	            		<select name="" id="" class="content-select" value="">
+	            			<option value="" disabled="disabled" selected="selected">请选择技术语言</option>
+	            			<option value="">请选择技术语言</option>
+	            			<option value="">请选择技术语言</option>
+	            		</select>
+	            		<select name="" id="" class="content-select" value=""> 
+	            			<option value="" disabled="disabled" selected="selected">请选择所属分类</option>
+	            			<option value="">请选择所属分类</option>
+	            			<option value="">请选择所属分类</option>
+	            		</select>
+	            		
+	            		<!--<div>请选择技术语言<b></b></div>
+	            		<div>请选择所属种类<b></b></div>-->
+	            	</div>
+	            	<div class="content Cp_content_last">
+	            		<span>项目描述:</span><br />
+	            		<textarea rows="4" cols="20" placeholder="请输入项目描述..."></textarea>
+	            	</div>
+	            	
+	            </div>
+	            <h2>智百验证平台<br />V2.01</h2>
             </div>
             <div class="Re_footer">
-            	<a class="first" href="##">项目中心<b></b></a>
-            	<a class="center" href="##">设备列表<b></b></a>
-            	<a class="right" href="##">我的信息<b></b></a>
+            	<button>创建项目</button>
             </div>
         </div>
     </div>
@@ -93,69 +127,6 @@
             document.getElementById('wrap').style.zoom = e.target.activeElement.clientWidth/750;
         });
     };
-    window.onload = function(){
-
-      var moveX,   //手指滑动距离
-          endX,    //手指停止滑动时X轴坐标
-          cout = 0,  //滑动计数器
-          moveDir;  //滑动方向
-      var movebox = document.querySelector(".movebox");  //滑动对象
-      var Li = movebox.querySelectorAll("li");  //滑动对象item
-      var width = parseInt(window.getComputedStyle(movebox.parentNode).width);  //滑动对象item的宽度
-
-      // movebox.style.width = (width*4) + "px"; //设置滑动盒子width
-      // for(var i = 0; i < Li.length; i++){
-      //   Li[i].style.width = width + "px";  //设置滑动item的width，适应屏幕宽度
-      // }
-
-      //触摸开始
-      function boxTouchStart(e){
-        var touch = e.touches[0];  //获取触摸对象
-        startX = touch.pageX;  //获取触摸坐标
-        endX = parseInt(movebox.style.webkitTransform.replace("translateX(", "")); //获取每次触摸时滑动对象X轴的偏移值
-      }
-
-      function boxTouchMove(e){
-        var touch = e.touches[0];
-        moveX = touch.pageX - startX;  //手指水平方向移动的距离
-
-        if(cout == 0 && moveX > 0){   //刚开始第一次向左滑动时
-          return false;
-        }
-
-        if(cout == 3 && moveX < 0){   //滑动到最后继续向右滑动时
-          return false;
-        }
-
-        movebox.style.webkitTransform = "translateX(" + (endX + moveX) + "px)"; //手指滑动时滑动对象随之滑动
-      }
-
-      function boxTouchEnd(e){
-        moveDir = moveX < 0 ? true : false;   //滑动方向大于0表示向左滑动，小于0表示向右滑动
-        //手指向左滑动
-        if(moveDir){
-
-          if(cout<3){
-            movebox.style.webkitTransform = "translateX(" + (-100) + "px)";
-            cout++;
-          }
-        //手指向右滑动
-        }else{
-          //滑动到初始状态时返回false
-          if(cout == 0){
-            return false;
-          }else{
-            movebox.style.webkitTransform = "translateX(" + (0) + "px)";
-            cout--;
-          }
-        }
-      }
-
-      //滑动对象事件绑定
-      movebox.addEventListener("touchstart", boxTouchStart, false);
-      movebox.addEventListener("touchmove", boxTouchMove, false);
-      movebox.addEventListener("touchend", boxTouchEnd, false);
-    }
 </script>
 
 </html>

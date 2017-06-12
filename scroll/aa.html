@@ -27,26 +27,30 @@
 <script src="zepto.js"></script>
 
 <script>
-
 var Wheight=$(window).height();
 console.log(Wheight);
 var Cheight=$('.menu-tab').height();
 console.log(Cheight);
+width.onload=function(){
 $(window).on('scroll', function(event) {
     event.preventDefault();
     var srcollTop = $(window).scrollTop();
     var height=Cheight-Wheight;
-    alert("滑动");
+ 
     if (srcollTop >= height) {
        $('.menu-tab').css({
         "background":"blue"
        });
+       alert("底部");
     } else {
         $('.menu-tab').css({
         "background":"red"
        });
     }
 });
+}
+
+
 
 </script>
 </body>

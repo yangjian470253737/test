@@ -51,7 +51,7 @@
 						return false;
 					}					
 					navigator.getUserMedia(videoObj, function(stream) {	
-						alert(stream)
+						alert(""+stream+"开始调用摄像机")
 						video.src = stream;
 						video.play();
 					}, MediaErr);
@@ -83,6 +83,7 @@
 				}
 				//这个是拍照按钮的事件，          
 				$("#snap").click(function() {
+					alert("点击调用摄像头")
 					startPat();
 				}).show();
 			} catch(e) {
@@ -96,26 +97,29 @@
 		}
 		//开始拍照
 		function startPat() {
-			alert(2)
+			alert("开始拍照")
 			setTimeout(function() { //防止调用过快
 				if(context) {
 					context.drawImage(video, 0, 0, 320, 320);
-					alert(3)
+					alert("正在扫描")
 					CatchCode();
 				}
 			}, 200);
 		}
 		//抓屏获取图像流，并上传到服务器      
 		function CatchCode() {
+			alert("上传服务器")
 			if(canvas != null) {
 				//以下开始编 数据   
 				var imgData = canvas.toDataURL();
 				//将图像转换为base64数据
 				var base64Data = imgData; //.substr(22); //在前端截取22位之后的字符串作为图像数据
 				//开始异步上
+				alert("异步上传中")
 				$.post("saveimg.php", {
 					"img": base64Data
 				}, function(result) {
+					alert(""+result+"成功")
 					printHtml("解析结果：" + result.data);
 					if(result.status == "success" && result.data != "") {
 						printHtml("解析结果成功！");

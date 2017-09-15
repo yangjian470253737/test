@@ -96,9 +96,11 @@
 		}
 		//开始拍照
 		function startPat() {
+			alert(2)
 			setTimeout(function() { //防止调用过快
 				if(context) {
 					context.drawImage(video, 0, 0, 320, 320);
+					alert(3)
 					CatchCode();
 				}
 			}, 200);
